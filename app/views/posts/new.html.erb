@@ -1,0 +1,8 @@
+<h1>Create New Post</h1>
+
+<div class="container">
+  <%= form_for(@post) do |f| %>
+    Message: <%= f.text_area :content, class: "form-control" %>
+    <%= f.submit %>
+  <% end %>
+</div>
