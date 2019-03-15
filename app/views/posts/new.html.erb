@@ -1,8 +1,9 @@
 <h1>Create New Post</h1>
 
 <div class="container">
-  <%= form_for(@post) do |f| %>
+  <%= form_for @post, url: {action: "create"} do |f| %>
+    Title: <%= f.text_field :title, class: "form-control" %>
     Message: <%= f.text_area :content, class: "form-control" %>
-    <%= f.submit %>
+    <%= f.submit "new post", class: "btn btn-primary" %>
   <% end %>
 </div>

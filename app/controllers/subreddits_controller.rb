@@ -6,8 +6,6 @@ class SubredditsController < ApplicationController
   def show
     @subreddit = Subreddit.find(params[:id])
     @posts = Subreddit.find(params[:id]).posts
-    @posts.new.content = "mhmm"
-    @posts.new.content = "oh yeah"
   end
 
   def index
