@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_16_003147) do
+ActiveRecord::Schema.define(version: 2019_03_16_175437) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_03_16_003147) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "user_id"
+    t.integer "updoots"
     t.index ["subreddit_id", "created_at"], name: "index_posts_on_subreddit_id_and_created_at"
     t.index ["subreddit_id"], name: "index_posts_on_subreddit_id"
   end

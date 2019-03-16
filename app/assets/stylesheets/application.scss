@@ -22,7 +22,17 @@ a {
   font-size: 32px;
 }
 
+.post-link {
+  display: inline-block;
+  font-size: 28px;
+}
+
 .post-content {
+  font-size: 24px;
+}
+
+.post-updoots {
+  display: inline-block;
   font-size: 24px;
 }
 
@@ -35,4 +45,8 @@ a {
 #nav-home-link {
   float: left;
   font-size: 24px;
+}
+
+.title {
+  background-color: #D3D3D3;
 }

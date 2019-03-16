@@ -18,8 +18,12 @@ Rails.application.routes.draw do
 
 
   resources :subreddits do
-    resources :posts
+    resources :posts do
+      resources :comments
+    end
   end
 
-  resources :users
+  resources :users do
+    resources :comments
+  end
 end

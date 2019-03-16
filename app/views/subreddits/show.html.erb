@@ -6,8 +6,12 @@
   <ul style="list-style-type:none;" class="list-group post-list">
     <% @posts.each do |p| %>
       <li class="list-group-item post">
-        <h6 class="post-title"><%= @subreddit.name %></h6>
-        <h6 class="post-title"><%= link_to p.title.to_s, url_for([@subreddit, p]) %></h6>
+
+        <div class="container title">
+          <p class="post-updoots"><%= p.updoots %>&uarr;</p>
+          <h6 class="post-link">@<%= @subreddit.name %> -</h6>
+          <h6 class="post-title"><%= link_to p.title.to_s, url_for([@subreddit, p]) %></h6>
+        </div>
         <p class="post-content"><%= p.content %></p>
       </li>
     <% end %>
