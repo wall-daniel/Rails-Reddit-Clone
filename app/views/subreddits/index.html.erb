@@ -1,4 +1,8 @@
+<% provide(:title, "Subreddits") %>
+
 <h1>List of subreddits</h1>
+
+<%= link_to "Create Subreddit", subreddits_new_path %>
 
 <% @subreddits.each do |s| %>
   <p><%= link_to s.name, s %></p>

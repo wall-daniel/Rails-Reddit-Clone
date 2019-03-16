@@ -1,10 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-dark bg-dark">
-  <div class="container">
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><%= link_to "Home", root_url %></li>
+  <div class="container navbar">
+    <p id="nav-home-link"><%= link_to "Home", root_url %></p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar navbar-nav ">
         <li class="nav-item"><%= link_to "Subreddits", subreddits_index_url %></li>
-        <li class="nav-item"><%= link_to "New", subreddits_new_url %></li>
         <li class="nav-item"><%= link_to "Users", users_index_url %></li>
         <li class="nav-item"><%= link_to "Login", login_path %></li>
       </ul>
