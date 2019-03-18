@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @subreddit = Subreddit.find(params[:subreddit_id])
-    @comment = Comment.new
+    @comments = Comment.all
   end
 
   def create
@@ -29,12 +29,13 @@ class PostsController < ApplicationController
   end
 
 
-
   private
 
     def post_params
       params.require(:post).permit(:content, :title)
     end
 
-
+    def comment_params
+      params.require(:comment).permit(:comment, :user_id, :post_id)
+    end
 end

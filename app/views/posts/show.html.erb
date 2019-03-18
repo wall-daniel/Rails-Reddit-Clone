@@ -5,9 +5,10 @@
   <%= @post.content %>
 </div>
 
-<div class="comment-box">
-  <%= form_for @comment, url: {action: "create"} do |f| %>
-    Comment: <%= f.text_area :comment %>
-    <%= f.submit "Post comment" %>
+<%= link_to "New Comment", new_subreddit_post_comment_path(@subreddit, @post) %>
+
+<ul class="comments">
+  <% @comments.each do |c| %>
+    <li><%= c.comment %></li>
   <% end %>
-</div>
+</ul>
